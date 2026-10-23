@@ -18,7 +18,7 @@ const now = document.getElementById("today");
 const jcurpsd = new Date(2026,9,21);
 const bcurpsd = new Date(2026,9,14);
 
-const jformattedDate = bcurpsd.toLocaleDateString("en-PH");
+const jformattedDate = jcurpsd.toLocaleDateString("en-PH");
 const bformattedDate = bcurpsd.toLocaleDateString("en-PH");
 
 const total_participants = 2;
