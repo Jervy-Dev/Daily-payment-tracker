@@ -161,6 +161,30 @@
     align-items: center;
 }
 
+.tsav{
+    display: flex;
+    justify-self: center;
+    width: 100%;
+    box-shadow: 0px 0px 3px gray;
+    height: 10vh;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 10px;  
+    justify-content: space-evenly;
+}
+
+.tsav > div{
+    flex: 1;
+    text-align: center;
+}
+
+.jsaves_con{
+    height: 100%;
+    border-left: solid 1px rgb(228, 216, 216);
+    border-right: solid 1px rgb(228, 216, 216);
+}
+
+
 @media (max-width:1251px){
     .content{
         width: 100%;
