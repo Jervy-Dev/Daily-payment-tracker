@@ -15,12 +15,14 @@ const dailyp = document.getElementById("Dpay");
 const sdate = document.getElementById("startdate");
 const now = document.getElementById("today");
 
+const startdate = new Date(2026,6,20) //------
+const currentdate = new Date(year, month -1, day);
 const jcurpsd = new Date(2026,9,21);
 const bcurpsd = new Date(2026,9,14);
 
 const jformattedDate = jcurpsd.toLocaleDateString("en-PH");
 const bformattedDate = bcurpsd.toLocaleDateString("en-PH");
-
+  
 const total_participants = 2;
 const dailypay = 50;
 const stdate = "7/20/2026";
@@ -31,14 +33,30 @@ dailyp.innerHTML = dailypay;
 sdate.innerHTML = `<p class="lar">${stdate}</p>`;
 
 
-const currentdate = new Date(year, month -1, day);
-
 jcurpsd.setHours(0, 0, 0, 0);
-bcurpsd.setHours(0, 0, 0, 0);
+bcurpsd.setHours(0, 0, 0, 0); 
 currentdate.setHours(0, 0, 0, 0);
+startdate.setHours(0, 0, 0, 0);//------
 
-const jcurpdifference = currentdate - jcurpsd;
 const bcurpsdiffrence = currentdate - bcurpsd;
+const jcurpdifference = currentdate - jcurpsd;
+
+const tsaves = Math.floor(
+    (jcurpsd - startdate) / (1000 * 60 * 60 * 24)
+);
+
+const bsaves = Math.floor(
+    (bcurpsd - startdate) / (1000 * 60 * 60 * 24)
+);
+
+const jtsaves = tsaves * 50;
+const btsaves = bsaves * 50;
+const totalsavings = jtsaves + btsaves;
+
+
+jtsav.textContent = jtsaves;
+btsav.textContent = btsaves;
+totalsaves.textContent = totalsavings;
 
 const jcurpsdays = Math.floor(
     jcurpdifference / (1000 * 60 * 60 * 24)
@@ -64,7 +82,7 @@ j1balance.textContent = jtad;
 b2balance.textContent = btad;
 jlpdate.textContent= jformattedDate;
 blpdate.textContent= bformattedDate;
-
+     
 
 
 
